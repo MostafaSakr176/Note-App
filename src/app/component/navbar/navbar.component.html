@@ -8,15 +8,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown" *ngIf="islogin;else logout">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Login
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" routerLink="/signin">Sign In</a>
-                        <a class="dropdown-item" routerLink="/signup">Sign Up</a>
-                    </div>
+                <li class="nav-item" *ngIf="islogin; else logout">
+                        <a class="nav-link" routerLink="/signin">Sign In</a>
+                </li>
+                <li class="nav-item" *ngIf="islogin; else logout">
+                    <a class="nav-link" routerLink="/signup">Sign up </a>
                 </li>
                 <ng-template #logout>
                     <li class="nav-item dropdown" >
